@@ -1,0 +1,41 @@
+*{margin:0; padding:0; border-collapse: none;box-sizing: border-box; color:#333;font-weight: lighter;}
+::-webkit-scrollbar {
+    display: none;
+}
+html{scroll-behavior: smooth}
+body{
+    background-repeat: no-repeat;background-position: center;background-size: cover;height:100vh;
+    position: relative;
+    background:#f2f2f2
+}
+.flex{display: flex; flex-wrap: wrap;}
+.btw{display: flex;justify-content: space-between;}
+.h{height:10vh}
+.hh{height:5vh}
+.b{border:1px solid black}
+a{text-decoration: none;cursor: pointer;}
+ul{list-style: none;}
+.full{width:100%;height:100vh;position: relative;overflow: hidden;}
+.wrap{max-width: 50%;margin:0 auto}
+
+
+.vs .txt{position: absolute;transform: translate(-50%,-50%);left:50%;top:50%;}
+.vs h2{font-size:5em}
+
+header{position: fixed;width:100%;height:50px;background:#333;z-index: 100;}
+header a{color:white;font-family: 'Chonburi', serif;line-height: 50px;}
+header ul{width:35%;}
+header a:hover{color:#d0312d}
+
+.ts{background:#f2f2f2}
+.ts h2{font-size:3em}
+.ts input{width:84%;height:40px;text-indent: 10px;font-size:1.1em}
+.ts button{width:15%;height:40px;background:#d0312d;color:white;border:1px solid #d0312d;font-size:1em}
+
+.ts .res{width:100%;height:60vh;font-size:1.2em;background:#333;color:greenyellow;padding:10px;overflow: scroll;}
+
+.hs{position: relative;}
+.hs h2{font-size:3em}
+.hs img{opacity: .3;}
+.hs img:nth-child(1){position: absolute;bottom:40px}
+.hs h3{font-size:5em}
