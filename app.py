@@ -19,8 +19,8 @@ def ping():
         cmd = f'"{host}"'
         try:
             print('2')
-            output = subprocess.check_output(['/bin/sh', '-c', cmd], timeout=5)
-            return render_template('flag.html', data=output.decode('utf-8'))
+            output = subprocess.check_output(['/bin/sh', '-c', cmd], timeout=5) #아 쌍따옴표로 감싸야하는구나!! 
+            return render_template('index.html', data=output.decode('utf-8'))
         except subprocess.TimeoutExpired:
             return render_template('index.html', data=f'Timeout!')
         except subprocess.CalledProcessError:
@@ -30,4 +30,4 @@ def ping():
 
 
 if __name__ == '__main__':
-    APP.run(host='0.0.0.0', port=5002)
+    APP.run(host='0.0.0.0', port=5000,debug=True)

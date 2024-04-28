@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <title>Deface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Micro+5&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Kode+Mono:wght@400..700&family=Micro+5&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="btw">
+        <div></div>
+        
+            <ul class="btw">
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#About">ABOUT</a></li>
+                <li><a href="#Test">TEST</a></li>
+                <li><a href="#History">HISTORY</a></li>
+                <li><a href="#Etc">ETC</a></li>
+            </ul>
+        
+        <div></div>
+    </header>
+    <div class="full vs" id="Home">
+        <div class="txt">
+            <h2>HI <span id="mod">________</span> , <span style="font-family: 'Micro 5', sans-serif; font-size:1.7em">^w^</span></h2>
+            <h2>
+                <span style="font-family: 'Chonburi', serif;">W</span>
+                
+                <span style="font-family:  'Kode Mono', monospace;">e</span>
+                <span style="font-family:  'Kode Mono', monospace;">l</span>
+                <span style="font-family: 'Micro 5', sans-serif; font-size:2em">c</span>
+                <span style="font-family:  'Kode Mono', monospace;">o</span>
+                <span style="font-family: 'Chonburi', serif;">m</span> 
+                _
+                <span style="font-family:  'Kode Mono', monospace;">t</span>
+                <span style="font-family:  'Kode Mono', monospace;">o</span>
+            </h2>
+            <h2>
+                <span style="font-family:  'Kode Mono', monospace;">{</span>
+                <span style="font-family: 'Chonburi', serif;">CERT-IS🐞</span>
+                <span style="font-family:  'Kode Mono', monospace;">}</span>
+            </h2>
+        </div>
+    </div>
+
+    <!-- <div class="full about" id="About"></div> -->
+    <div class="full ts" id="Test">
+        <div class="h"></div>
+        <div class="wrap">
+            <h2>Testing room (❌Do not hack!😠)</h2>
+            <div class="hh"></div>
+
+            <form method="POST" action="/ping">
+                <input type="text" name="command">
+                <button type="submit">전송</button>
+            </form>
+            <div class="hh"></div>
+
+            <div class="res">
+                {% if data %}
+                <pre style="color:lightgreen">{{ data }}</pre>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="full hs" id="History">
+        <div class="h"></div>
+        <h2>History</h2>
+        <h3 style="font-family: 'Chonburi', serif;">Made in eunha . . .</h3>
+        <img src="/static/img/note.png" alt="">
+        <img src="/static/img/star.png" alt=""> 
+    </div>
+</body>
+</html>

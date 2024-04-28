@@ -19,10 +19,10 @@ ul{list-style: none;}
 .wrap{max-width: 50%;margin:0 auto}
 
 
-.vs .txt{position: absolute;transform: translate(-50%,-50%);left:50%;top:50%;}
+.vs .txt{position: absolute;transform: translate(-50%,-50%);left:50%;top:50%;z-index: 100;}
 .vs h2{font-size:5em}
 
-header{position: fixed;width:100%;height:50px;background:#333;z-index: 100;}
+header{position: fixed;width:100%;height:50px;background:#333;z-index: 1001;}
 header a{color:white;font-family: 'Chonburi', serif;line-height: 50px;}
 header ul{width:35%;}
 header a:hover{color:#d0312d}
@@ -39,3 +39,66 @@ header a:hover{color:#d0312d}
 .hs img{opacity: .3;}
 .hs img:nth-child(1){position: absolute;bottom:40px}
 .hs h3{font-size:5em}
+
+#mod{color:#d0312d}
+
+.about{background:white}
+
+footer{background:#333;color:white;text-align: center;height:70px;line-height: 70px;font-size:.8em}
+
+.mod_img{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background:white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vs .mod_img:nth-child(1){ 
+    left:12%;
+    top:40%;
+    width:300px;
+    height:400px;
+    background-image:url('img/image1.jpg');
+}
+
+.vs .mod_img:nth-child(2){ 
+    right:-23%;
+    top:87%;
+    width:600px;
+    height:300px;
+    z-index: 1;
+    background-image:url('img/image2.jpg');
+    border-radius: 100%;
+}
+
+.vs .mod_img:nth-child(3){ 
+    right:-10%;
+    top:25%;
+    width:350px;
+    height:400px;
+    
+    background-image:url('img/image9.jpg')
+}
+
+.vs .mod_img:nth-child(4){ 
+    left:25%;
+    top:92%;
+    width:300px;
+    height:600px;
+    background-image:url('img/image8.jpg')
+}
+
+.about{position: relative;}
+.about ul{width:90%;margin:0 auto}
+.about li{width:calc(100%/5.5);height:500px;background:#e6e6e6; background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;}
+.about li:nth-child(odd){margin-top:-40px}
+
+.about li:nth-child(1){background-image:url('img/image7.jpg')}
+.about li:nth-child(2){background-image:url('img/image3.jpg')}
+.about li:nth-child(3){background-image:url('img/image4.jpg')}
+.about li:nth-child(4){background-image:url('img/image6.jpg')}
+.about li:nth-child(5){background-image:url('img/image5.jpg')}
