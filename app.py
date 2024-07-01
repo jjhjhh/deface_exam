@@ -19,7 +19,7 @@ def ping():
         cmd = f'"{host}"'
         try:
             print('2')
-            output = subprocess.check_output(['/bin/sh', '-c', cmd], timeout=5) #아 쌍따옴표로 감싸야하는구나!! 
+            output = subprocess.check_output(['/bin/sh', '-c', cmd], timeout=5)
             return render_template('index.html', data=output.decode('utf-8'))
         except subprocess.TimeoutExpired:
             return render_template('index.html', data=f'Timeout!')
