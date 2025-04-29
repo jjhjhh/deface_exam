@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <title>Deface&Command injection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Micro+5&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Kode+Mono:wght@400..700&family=Micro+5&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="btw">
+        <div></div>
+        <ul class="btw">
+            <li><a href="/">HOME</a></li>
+            <li><a href="#About">ABOUT</a></li>
+            <li><a href="/testing">TESTING ROOM</a></li>
+            <li><a href="#History">HISTORY</a></li>
+            <li><a href="/store">STORE</a></li>
+        </ul>
+        <div></div>
+    </header>
+
+    <div class="full ts" id="Test">
+        <div class="h"></div>
+        <div class="wrap">
+            <h2>Testing room (⚠️Only Admin!😠)</h2>
+            
+            <div class="hh"></div>
+
+            <form method="POST" action="/ping">
+                <input type="text" name="command">
+                <button type="submit">전송</button>
+            </form>
+            <div class="hh"></div>
+
+            <div class="res">
+                {% if data %}
+                <pre style="color:lightgreen">{{ data }}</pre>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <footer>CERT-IS 24-1 해입교 command injetcion 및 Deface 실습용 사이트</footer>
+</body>
+</html>

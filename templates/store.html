@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <title>Deface&Command injection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Micro+5&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Kode+Mono:wght@400..700&family=Micro+5&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="btw">
+        <div></div>
+        <ul class="btw">
+            <li><a href="/">HOME</a></li>
+            <li><a href="#About">ABOUT</a></li>
+            <li><a href="/testing">TESTING ROOM</a></li>
+            <li><a href="#History">HISTORY</a></li>
+            <li><a href="/store">STORE</a></li>
+        </ul>
+        <div></div>
+    </header>
+
+    <style>
+        .shop{max-width:1200px;margin:0 auto}
+        .shop li{width:calc(100%/5);text-align: center;padding:10px; border:2px solid #f2f2f2}
+        .shop img{width:100%}
+        .shop h1{text-align: center;font-size:2.5em;font-weight: bold;}
+        .shop h3{font-weight: bold;margin: 20px 0 20px 0;}
+    </style>
+
+    <div class="full shop" id="shop">
+        <div class="h"></div>
+        <div class="hh"></div>
+        <h1>🦄CERT-IS 회원을 위한 스토어✨</h1>
+        <div class="h"></div>
+        <ul class="btw">
+            <li>
+                <img src="/static/img/shop-1.png" alt="">
+                <h3><span>써티즈 배지</span>(500 coin)</h3>
+                <p>가방에 달고다니세요</p>
+            </li>
+            <li>
+                <img src="/static/img/shop-2.png" alt="">
+                <h3><span>써티즈 티셔츠</span>(17,000 coin)</h3>
+                <p>올여름 잠옷템</p>
+            </li>
+            <li>
+                <img src="/static/img/shop-3.png" alt="">
+                <h3><span>아이스 아메리카노</span><br>(2,500 coin)</h3>
+                <p>현대인의 필수품</p>
+            </li>
+            <li>
+                <img src="/static/img/shop-4.png" alt="">
+                <h3>🔥<span>맥북</span>🔥<br>(5,500,000 coin)</h3>
+                <p>스타벅스 출입가능</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $('.shop li').on('click', function () {
+          const product = $(this).find('span').text();
+          console.log(product)
+          const balance = 5000;
+      
+          $.ajax({
+            url: '/api/click',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ product, balance }),
+            success: function (res) {
+                alert(res.earned)
+                console.log('서버 응답:', res);
+            }
+          });
+        });
+      </script>
+
+
+    <footer>CERT-IS 24-1 해입교 command injetcion 및 Deface 실습용 사이트</footer>
+</body>
+</html>
